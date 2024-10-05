@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { CloudLightning, DollarSign, Zap } from "lucide-react"
+import { CloudLightning, DollarSign, Zap, ScrollText } from "lucide-react"
 import Image from "next/image"
 
 export function LandingPage() {
@@ -55,6 +55,35 @@ export function LandingPage() {
             </CardContent>
           </Card>
         </section>
+
+        <section className="mt-20">
+          <Card className="bg-white/10 backdrop-blur-lg border-none text-white">
+            <CardHeader>
+              <ScrollText className="w-10 h-10 mb-4" />
+              <CardTitle>Gil's Super Duper Premium Logging</CardTitle>
+              <CardDescription className="text-gray-200">Because regular logs are for regular folks!</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p>Why settle for $30 worth of AWS logs when you can have $3,000 worth of Gil's premium logs? That's right, folks! For just <a className="font-black underline" href="https://x.com/heyandras/status/1842501994977673666">100 times the price</a>, you get:</p>
+              <ul className="list-disc list-inside space-y-2">
+                <li>Logs so detailed, they'll log your logs!</li>
+                <li>AI-enhanced log analysis that even Gil can't understand!</li>
+                <li>Exclusive "Gil's Gut Feeling" log interpretations!</li>
+                <li>Log storage so secure, even you might not be able to access it!</li>
+              </ul>
+              <div className="bg-yellow-400/20 p-4 rounded-lg mt-4">
+                <p className="text-lg font-semibold">Limited Time Offer!</p>
+                <p>Sign up now and get a free* "I Overpaid for Logs and All I Got Was This Digital T-Shirt" NFT!</p>
+                <p className="text-xs mt-2">*Free with your $3,000 log package. Digital T-Shirt may or may not actually exist.</p>
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full bg-yellow-400 text-black hover:bg-yellow-500">Upgrade to Premium Logging</Button>
+            </CardFooter>
+          </Card>
+        </section>
+
+
         <section className="mt-20 flex flex-col md:flex-row items-center justify-center gap-8">
           <Image
             src="/gil-computer.jpg" // Using a Vercel Blob Storage URL
@@ -87,6 +116,9 @@ export function LandingPage() {
             </CardFooter>
           </Card>
         </section>
+
+
+
       </main>
       <footer className="container mx-auto py-8 text-center">
         <Image
