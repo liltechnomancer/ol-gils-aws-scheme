@@ -60,6 +60,37 @@ export function LandingPage() {
           <Card className="bg-white/10 backdrop-blur-lg border-none text-white">
             <CardHeader>
               <ScrollText className="w-10 h-10 mb-4" />
+              <CardTitle>Serverless Servers: The Future is Now(ish)!</CardTitle>
+              <CardDescription className="text-gray-200">Because our other offers wheren't confusing enough!</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p>Folks, have you heard about serverless? Well, forget all that! Introducing Gil's Serverless Servers - it's like serverless, but with actual servers! Maybe!</p>
+              <ul className="list-disc list-inside space-y-2">
+                <li>Experience the thrill of not knowing if your code is running on a server, the cloud, or in Gil's garage!</li>
+                <li>Our proprietary "Schrödinger's Server" technology - your function is both running and not running until you check your bill!
+                </li>
+                <li>Enjoy the best of both worlds: the complexity of servers with the unpredictability of serverless!</li>
+                <li>"In-function concurrency" so advanced, even we don't know what's happening!</li>
+              </ul>
+              <div className="bg-yellow-400/20 p-4 rounded-lg mt-4">
+                <p className="text-lg font-semibold">Gil's Personal Guarantee:</p>
+                <p>If you can figure out how this actually works, I'll give you my last dollar! (Please don't figure it out, I really need that dollar.)</p>
+                <p className="text-xs mt-2">Sign up now, before I remember this makes no sense!</p>
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full bg-yellow-400 text-black hover:bg-yellow-500">Give me this!</Button>
+            </CardFooter>
+          </Card>
+        </section>
+
+
+
+
+        <section className="mt-20">
+          <Card className="bg-white/10 backdrop-blur-lg border-none text-white">
+            <CardHeader>
+              <ScrollText className="w-10 h-10 mb-4" />
               <CardTitle>Gil's Super Duper Premium Logging</CardTitle>
               <CardDescription className="text-gray-200">Because regular logs are for regular folks!</CardDescription>
             </CardHeader>
