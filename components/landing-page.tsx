@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { CloudLightning, DollarSign, Zap, ScrollText } from "lucide-react"
+import { CloudLightning, DollarSign, Zap, ScrollText, Lock, Database } from "lucide-react"
 import Image from "next/image"
 
 export function LandingPage() {
@@ -83,6 +83,59 @@ export function LandingPage() {
           </Card>
         </section>
 
+        <section className="mt-20">
+          <Card className="bg-white/10 backdrop-blur-lg border-none text-white">
+            <CardHeader>
+              <Lock className="w-10 h-10 mb-4" />
+              <CardTitle>Uncash: Rate Limiting for the Overwhelmed</CardTitle>
+              <CardDescription className="text-gray-200">Why do it yourself when you can pay us to do it... sort of?</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p>Introducing Uncash, the revolutionary rate limiting service funded by coins Gil found in his couch! Because who said spare change can't fuel a tech startup?</p>
+              <ul className="list-disc list-inside space-y-2">
+                <li>Rate limiting that's slower than Gil's sales pitch, but twice as confusing!</li>
+                <li>Proprietary "CouchCoin" algorithm - as reliable as Gil's financial advice!</li>
+                <li>Guaranteed to make your simple rate limiting task feel like rocket science!</li>
+                <li>Why implement a few lines of code when you can integrate our entire service?</li>
+              </ul>
+              <div className="bg-green-400/20 p-4 rounded-lg mt-4">
+                <p className="text-lg font-semibold">Gil's Special Offer!</p>
+                <p>Sign up now and get a genuine* piece of Gil's couch lint with every subscription!</p>
+                <p className="text-xs mt-2">*Genuineness not guaranteed. Lint may be sourced from other furniture.</p>
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full bg-green-400 text-black hover:bg-green-500">Complicate Your Rate Limiting Now!</Button>
+            </CardFooter>
+          </Card>
+        </section>
+
+        <section className="mt-20">
+          <Card className="bg-white/10 backdrop-blur-lg border-none text-white">
+            <CardHeader>
+              <Database className="w-10 h-10 mb-4" />
+              <CardTitle>D'ohQLite: Your SQLite, But Cloud-ier!</CardTitle>
+              <CardDescription className="text-gray-200">Because local databases are so last century!</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p>Ladies and gentlemen, have I got a deal for you! Introducing D'ohQLite, the revolutionary service that takes your simple, efficient SQLite database and gives it wings! Why keep your data grounded when it can soar through the clouds?</p>
+              <ul className="list-disc list-inside space-y-2">
+                <li>Experience the thrill of your data traveling the world! It's like a vacation for your bytes!</li>
+                <li>Enjoy our "Springfield Sync" feature - it's almost as reliable as my last job!</li>
+                <li>Why settle for instant local queries when you can savor the anticipation of cloud latency?</li>
+                <li>Our servers are guarded 24/7 by the finest security this side of Mr. Burns' hounds!</li>
+              </ul>
+              <div className="bg-orange-400/20 p-4 rounded-lg mt-4">
+                <p className="text-lg font-semibold">Gil's Honest Guarantee!</p>
+                <p>If our service goes down more than twice a day, I'll personally come and do your dishes! And let's be honest, you might be seeing a lot of me...</p>
+                <p className="text-xs mt-2">*Dish-washing service subject to availability. Gil may substitute with a heartfelt apology.</p>
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full bg-orange-400 text-black hover:bg-orange-500">Give Your SQLite Some D'oh!</Button>
+            </CardFooter>
+          </Card>
+        </section>
 
         <section className="mt-20 flex flex-col md:flex-row items-center justify-center gap-8">
           <Image
