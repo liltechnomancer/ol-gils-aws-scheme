@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { CloudLightning, DollarSign, Zap, ScrollText, Lock, Database } from "lucide-react"
+import { CloudLightning, DollarSign, Zap, ScrollText, Lock, Database, Server } from "lucide-react"
 import Image from "next/image"
 
 export function LandingPage() {
@@ -23,6 +23,52 @@ export function LandingPage() {
       </header>
       <main className="container mx-auto py-12">
         {/* Feature cards section remains unchanged */}
+
+        <section className="mb-20">
+          <Card className="bg-gradient-to-br from-yellow-400 to-orange-500 border-none text-black overflow-hidden">
+            <CardHeader className="pb-0">
+              <CardTitle className="text-4xl font-extrabold text-center mb-2">Serverless Servers: The Future is Now(ish)!</CardTitle>
+              <CardDescription className="text-xl text-center text-black">
+                Folks, have you heard about serverless? Well, forget all that! Introducing Gil's Serverless Servers - it's like serverless, but with actual servers! Maybe!
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="pt-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <Server className="w-6 h-6 mt-1 text-purple-700" />
+                    <p className="font-medium">Experience the thrill of not knowing if your code is running on a server, the cloud, or in Gil's garage!</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CloudLightning className="w-6 h-6 mt-1 text-purple-700" />
+                    <p className="font-medium">Our proprietary "Schrödinger's Server" technology - your function is both running and not running until you check your bill!</p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <Zap className="w-6 h-6 mt-1 text-purple-700" />
+                    <p className="font-medium">Enjoy the best of both worlds: the complexity of servers with the unpredictability of serverless!</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <DollarSign className="w-6 h-6 mt-1 text-purple-700" />
+                    <p className="font-medium">"In-function concurrency" so advanced, even we don't know what's happening!</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 p-6 bg-purple-700 rounded-lg text-white">
+                <h3 className="text-2xl font-bold mb-2">Gil's Personal Guarantee:</h3>
+                <p className="mb-2">If you can figure out how this actually works, I'll give you my last dollar! (Please don't figure it out, I really need that dollar.)</p>
+                <p className="font-bold italic">Sign up now, before I remember this makes no sense!</p>
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full bg-purple-700 text-white hover:bg-purple-800 text-lg py-6">Embrace the Serverless Server Paradox!</Button>
+            </CardFooter>
+          </Card>
+        </section>
+
+
+
         <section className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
           <Card className="bg-white/10 backdrop-blur-lg border-none text-white">
             <CardHeader>
@@ -56,7 +102,10 @@ export function LandingPage() {
           </Card>
         </section>
 
-        <section className="mt-20">
+
+
+
+        {/* <section className="mt-20">
           <Card className="bg-white/10 backdrop-blur-lg border-none text-white">
             <CardHeader>
               <ScrollText className="w-10 h-10 mb-4" />
@@ -82,7 +131,7 @@ export function LandingPage() {
               <Button className="w-full bg-yellow-400 text-black hover:bg-yellow-500">Give me this!</Button>
             </CardFooter>
           </Card>
-        </section>
+        </section> */}
 
 
 
