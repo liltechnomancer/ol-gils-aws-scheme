@@ -38,13 +38,14 @@ export function LandingPage() {
       </header>
       <main className="container mx-auto py-12">
 
-      <section className="relative mb-10 h-[calc(100vh-200px)] overflow-hidden">
+      <div className="flex flex-col lg:flex-row gap-4 items-center">
+      <section className="relative mx-auto aspect-square mb-10 h-[calc(100vh-200px)] overflow-hidden">
               <video
-                className="absolute top-0 left-0 w-full h-full object-cover"
+                className="absolute aspect-square top-0 left-0 w-full h-full object-cover"
                 loop
                 playsInline
               >
-                <source src="/gil.mp4" type="video/mp4" />
+                <source src="/gil.mp4#t=0.1" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className={`absolute inset-0 bg-black ${isPlaying ? 'opacity-0' : 'bg-opacity-50'} flex items-center justify-center`}>
@@ -65,7 +66,42 @@ export function LandingPage() {
                 {isPlaying ? <Pause className="mr-2" /> : <Play className="mr-2" />}
                 {isPlaying ? "Pause the Magic" : "Watch the Magic"}
               </Button>
+
             </section>
+            <section className="grid w-2/3 gap-2 md:grid-cols-2 lg:grid-cols-3">
+              <Card className="bg-white/10 backdrop-blur-lg border-none text-white">
+                <CardHeader>
+                  <CloudLightning className="w-10 h-10 mb-4" />
+                  <CardTitle>100x AWS Power</CardTitle>
+                  <CardDescription className="text-gray-200">It's like regular AWS, but way more expensive!</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>Experience the thrill of overpaying for cloud services. It's not just computing, it's computing with style!</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white/10 backdrop-blur-lg border-none text-white">
+                <CardHeader>
+                  <Zap className="w-10 h-10 mb-4" />
+                  <CardTitle>AI-Generated UIs</CardTitle>
+                  <CardDescription className="text-gray-200">Because human-designed UIs are so last season</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>Our AI creates UIs that even we don't understand. Impress your clients with inexplicable design choices!</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white/10 backdrop-blur-lg border-none text-white">
+                <CardHeader>
+                  <DollarSign className="w-10 h-10 mb-4" />
+                  <CardTitle>Unbeatable Pricing</CardTitle>
+                  <CardDescription className="text-gray-200">If you can afford it, you're not paying enough</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>Our prices are so high, you'll wonder if we made a mistake. Spoiler: We didn't!</p>
+                </CardContent>
+              </Card>
+            </section>
+</div>
+
         {/* Feature cards section remains unchanged */}
 
         <section className="mb-20">
@@ -112,39 +148,6 @@ export function LandingPage() {
         </section>
 
 
-
-        <section className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-          <Card className="bg-white/10 backdrop-blur-lg border-none text-white">
-            <CardHeader>
-              <CloudLightning className="w-10 h-10 mb-4" />
-              <CardTitle>100x AWS Power</CardTitle>
-              <CardDescription className="text-gray-200">It's like regular AWS, but way more expensive!</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>Experience the thrill of overpaying for cloud services. It's not just computing, it's computing with style!</p>
-            </CardContent>
-          </Card>
-          <Card className="bg-white/10 backdrop-blur-lg border-none text-white">
-            <CardHeader>
-              <Zap className="w-10 h-10 mb-4" />
-              <CardTitle>AI-Generated UIs</CardTitle>
-              <CardDescription className="text-gray-200">Because human-designed UIs are so last season</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>Our AI creates UIs that even we don't understand. Impress your clients with inexplicable design choices!</p>
-            </CardContent>
-          </Card>
-          <Card className="bg-white/10 backdrop-blur-lg border-none text-white">
-            <CardHeader>
-              <DollarSign className="w-10 h-10 mb-4" />
-              <CardTitle>Unbeatable Pricing</CardTitle>
-              <CardDescription className="text-gray-200">If you can afford it, you're not paying enough</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>Our prices are so high, you'll wonder if we made a mistake. Spoiler: We didn't!</p>
-            </CardContent>
-          </Card>
-        </section>
 
 
 
