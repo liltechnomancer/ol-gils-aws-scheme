@@ -4,10 +4,25 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { CloudLightning, DollarSign, Zap, ScrollText, Lock, Database, Server } from "lucide-react"
+import { CloudLightning, DollarSign, Zap, ScrollText, Lock, Database, Server, Play, Pause } from "lucide-react"
 import Image from "next/image"
+import { useState } from "react"
 
 export function LandingPage() {
+  const [isPlaying, setIsPlaying] = useState(false)
+
+    const toggleVideo = () => {
+      const video = document.querySelector('video')
+      if (video) {
+        if (isPlaying) {
+          video.pause()
+        } else {
+          video.play()
+        }
+        setIsPlaying(!isPlaying)
+      }
+    }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-500 to-purple-600 text-white">
       <header className="container mx-auto py-8 flex flex-col items-center">
@@ -22,6 +37,35 @@ export function LandingPage() {
         <p className="text-xl text-center">Why pay less when you can pay more?</p>
       </header>
       <main className="container mx-auto py-12">
+
+      <section className="relative mb-10 h-[calc(100vh-200px)] overflow-hidden">
+              <video
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                loop
+                playsInline
+              >
+                <source src="/gil.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className={`absolute inset-0 bg-black ${isPlaying ? 'opacity-0' : 'bg-opacity-50'} flex items-center justify-center`}>
+                <div className={`text-center max-w-4xl px-4 transition-opacity duration-300 ${isPlaying ? 'opacity-0' : 'opacity-100'}`}>
+                  <h2 className="text-5xl font-bold mb-6">Revolutionizing the Web with AI!</h2>
+                  <p className="text-xl mb-8">
+                    Ladies and gentlemen, feast your eyes on Gil's latest miracle! We're using the power of AI to make designers and front-end developers as obsolete as my last career! Why hire talented professionals when you can have our AI cobble together a website that's almost functional?
+                  </p>
+                  <p className="text-lg mb-8 italic">
+                    (Disclaimer: Our AI may occasionally produce websites that look like they were designed by a cat walking across a keyboard. But hey, that's the price of innovation!)
+                  </p>
+                </div>
+              </div>
+              <Button
+                onClick={toggleVideo}
+                className="absolute bottom-4 left-4 bg-yellow-400 text-black hover:bg-yellow-500 text-lg py-6 px-8 rounded-full flex items-center"
+              >
+                {isPlaying ? <Pause className="mr-2" /> : <Play className="mr-2" />}
+                {isPlaying ? "Pause the Magic" : "Watch the Magic"}
+              </Button>
+            </section>
         {/* Feature cards section remains unchanged */}
 
         <section className="mb-20">
