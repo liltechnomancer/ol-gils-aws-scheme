@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { CloudLightning, DollarSign, Zap, ScrollText, Lock, Database, Server, Play, Pause } from "lucide-react"
+import { CloudLightning, DollarSign, Zap, ScrollText, Lock, Database, Server, Play, Pause, Key, UserPlus } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react"
 
@@ -101,6 +101,49 @@ export function LandingPage() {
               </Card>
             </section>
 </div>
+
+<section className="mb-20">
+  <Card className="bg-gradient-to-br from-yellow-400 to-orange-500 border-none text-black overflow-hidden">
+    <CardHeader className="pb-0">
+      <CardTitle className="text-4xl font-extrabold text-center mb-2">Join Gil's Cloud Authentication Revolution!</CardTitle>
+      <CardDescription className="text-xl text-center text-black">
+        Are you ready to be the Jack-of-all-trades (and master of none) in the world of questionable cloud security?
+      </CardDescription>
+    </CardHeader>
+    <CardContent className="pt-6">
+      <div className="grid md:grid-cols-2 gap-6">
+        <div className="space-y-4">
+          <div className="flex items-start space-x-3">
+            <UserPlus className="w-6 h-6 mt-1 text-purple-700" />
+            <p className="font-medium">We're hiring an all-in-one PM/engineer/marketer/therapist to bring Gil's "Maybe Secure" technology to market!</p>
+          </div>
+          <div className="flex items-start space-x-3">
+            <DollarSign className="w-6 h-6 mt-1 text-purple-700" />
+            <p className="font-medium">Earn a commission-based salary that might, if you're lucky, reach the dizzying heights of a regular paycheck!</p>
+          </div>
+        </div>
+        <div className="space-y-4">
+          <div className="flex items-start space-x-3">
+            <Zap className="w-6 h-6 mt-1 text-purple-700" />
+            <p className="font-medium">Launch before EOY, or whenever Gil remembers what EOY stands for!</p>
+          </div>
+          <div className="flex items-start space-x-3">
+            <CloudLightning className="w-6 h-6 mt-1 text-purple-700" />
+            <p className="font-medium">Rebuild a competitor's dashboard within ours, because why innovate when you can complicate?</p>
+          </div>
+        </div>
+      </div>
+      <div className="mt-8 p-6 bg-purple-700 rounded-lg text-white">
+        <h3 className="text-2xl font-bold mb-2">Gil's Unbeatable Offer:</h3>
+        <p className="mb-2">We'll give you 30-70% of a regular salary, and a commission structure that's as clear as mud! If you work really, really hard, you might even make as much as a regular job! Maybe!</p>
+        <p className="font-bold italic">Apply now, before Gil remembers he can't afford to pay anyone!</p>
+      </div>
+    </CardContent>
+    <CardFooter>
+      <Button className="w-full bg-purple-700 text-white hover:bg-purple-800 text-lg py-6">Apply to Join Gil's Authentication Revolution!</Button>
+    </CardFooter>
+  </Card>
+</section>
 
         {/* Feature cards section remains unchanged */}
 
